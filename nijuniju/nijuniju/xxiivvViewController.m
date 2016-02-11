@@ -81,6 +81,7 @@ CGRect choice3Frame;
 	if( currentMode == japanese ){ [_languageToggleButton setTitle:@"日本語" forState:UIControlStateNormal]; }
 	else if( currentMode == russian ){ [_languageToggleButton setTitle:@"РУССКИЙ" forState:UIControlStateNormal]; }
     else if( currentMode == korean ) { [_languageToggleButton setTitle:@"한국어" forState:UIControlStateNormal]; }
+    else if( currentMode == sumerian ) { [_languageToggleButton setTitle:@"𒅴𒂠" forState:UIControlStateNormal]; }
 	else{ [_languageToggleButton setTitle:@"---" forState:UIControlStateNormal]; }
 	
 	// Notification
@@ -307,6 +308,9 @@ CGRect choice3Frame;
 	}
     else if (currentMode == russian) {
         currentMode = korean;
+    }
+    else if (currentMode == korean) {
+        currentMode = sumerian;
     }
 	else{
 		currentMode = japanese;

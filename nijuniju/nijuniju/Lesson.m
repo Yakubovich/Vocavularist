@@ -15,9 +15,10 @@ NSArray * currentLesson;
 
 -(Lesson*)initWithLessonMode :(lessonMode)lessonMode
 {
-	if( lessonMode == japanese ){ currentLesson = [self japaneseLesson]; }
-    else if (lessonMode == korean) { currentLesson = [self koreanLesson]; }
-	else{ currentLesson = [self russianLesson]; }
+  if ( lessonMode == japanese ){ currentLesson = [self japaneseLesson]; }
+  else if (lessonMode == korean) { currentLesson = [self koreanLesson]; }
+  else if (lessonMode == sumerian) { currentLesson = [self sumerianLesson]; }
+	else { currentLesson = [self russianLesson]; }
 	
 	return self;
 }
@@ -1986,6 +1987,33 @@ NSArray * currentLesson;
         @[@"인천", @"incheon city"],
         @[@"거기", @"there (location)"],
         @[@"저곳", @"that place over there"]
+    ];
+}
+
+-(NSArray*)sumerianLesson
+{
+    NSLog(@"! LESSON | Loading Sumerian");
+
+    return @[
+        @[@"𒀀 (A)", @"liquid, father"],
+        @[@"𒂍 (É)", @"house, temple"],
+        @[@"𒌑 (Ú)", @"plant, food, bread, nourish, strong"],
+        @[@"𒀊  (AB)", @"window, opening, niche"],
+        @[@"𒁀 (BA)", @"portion"],
+        @[@"𒀖 (ÁB)", @"cow"],
+        @[@"𒅁 (IB)", @"corner, angle"],
+        @[@"𒌒 (UB)", @"corner, angle"],
+        @[@"𒌓 (UD)", @"sun, light, day"],
+        @[@"𒅅 (IG)", @"door"],
+        @[@"𒀭 (AN)", @"sky, heaven, priest, lord"],
+        @[@"𒆠  (KI)", @"earth, place"],
+        @[@"𒍚  (ÙZ)", @"goat"],
+        @[@"𒌨  (UR)", @"dog, carnivore, servant, young man, warrior, foe"],
+        @[@"𒅗  (KA)", @"mouth"],
+        @[@"𒅆  (IGI)", @"eye"],
+        @[@"𒊕  (SAG)", @"head"],
+        @[@"𒈲  (MUŠ)", @"serpent"],
+        @[@"𒌷 (URU)", @"city"]
     ];
 }
 
